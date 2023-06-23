@@ -1,0 +1,39 @@
+html,
+body {
+    overflow-x: hidden;
+}
+html {
+    font-size: 6.25%;
+}
+body {
+    font-size: 16rem;
+    font-family: $-font-primary;
+    background-color: $-primary-color;
+    color: $-white;
+}
+// Dùng chung
+.content {
+    max-width: 1170px;
+    width: calc(100% - 40px);
+    margin-inline: auto;
+}
+.btn {
+    padding: 10px;
+    font-size: 13rem;
+    font-weight: 600;
+    letter-spacing: -0.13px;
+    min-width: 79px;
+    min-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.btn-light {
+    color: $-primary-color;
+    background-color: $-white;
+}
+.btn-dark {
+    color: $-white;
+    background-color: $-black-2;
+}
