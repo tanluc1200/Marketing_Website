@@ -1,0 +1,26 @@
+#scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border: 0;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    outline: 0;
+    z-index: 9999;
+    i {
+        color: var(--black);
+    }
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+}

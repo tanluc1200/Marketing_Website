@@ -1,8 +1,16 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    // overflow: hidden;
+    background-color: var(--primary-color);
     &-content {
         padding-block: 22px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     &-logo {
         display: flex;
@@ -18,7 +26,7 @@
         width: 40px;
         height: 22px;
         border-radius: 11px;
-        background-color: $-black-1;
+        background-color: var(--black-1);
         &-icon {
             position: absolute;
             right: 0;
@@ -30,7 +38,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $-white-light-1;
+            background-color: var(--white-light-1);
+            transition: all 0.5s ease;
+            &.active {
+                right: 22px;
+                transition: all 0.5s ease;
+            }
+            i {
+                color: var(--black-1);
+                font-size: small;
+            }
         }
     }
     &-menu {
@@ -67,5 +84,41 @@
         display: flex;
         align-items: center;
         column-gap: 16px;
+    }
+    &-mobile {
+        display: none;
+        &-icon {
+            font-size: 20px;
+        }
+        &-link {
+            font-size: 20px;
+            padding: 15px 20px;
+            transition: 0.3s;
+            &:hover {
+                background-color: var(--white);
+                color: var(--orange);
+            }
+        }
+        &-menu {
+            background-color: var(--orange);
+            color: var(--black);
+            font-weight: 500;
+            transform: scale(0);
+            transform-origin: top right;
+            opacity: 0;
+            transition: all 0.5s;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 80px;
+            z-index: 9999;
+            &.active {
+                opacity: 1;
+                transform: scale(1);
+                transition: all 0.5s;
+            }
+        }
     }
 }

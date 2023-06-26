@@ -1,0 +1,50 @@
+.hero {
+    padding-block: 60px 100px;
+    .content {
+        display: flex;
+    }
+    &-content {
+        margin-inline: auto;
+        text-align: center;
+        width: 592px;
+        .heading,
+        .desc {
+            width: 464px;
+            margin-inline: auto;
+        }
+        .heading {
+            color: var(--white);
+            font-size: 42rem;
+            font-weight: 700;
+            line-height: calc(46 / 42);
+            letter-spacing: -1.05px;
+        }
+        .desc {
+            margin-block: 16px 20px;
+            font-size: 20px;
+            line-height: calc(28 / 12);
+            color: var(--gray-3);
+            &:nth-of-type(2) {
+                width: initial;
+            }
+        }
+    }
+    &-cta {
+        margin-bottom: 108px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        .btn {
+            column-gap: 8px;
+            border-radius: 8px;
+            min-width: 186px;
+            min-height: 45px;
+        }
+        .btn-light {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+    }
+}

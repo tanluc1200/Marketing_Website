@@ -7,9 +7,18 @@ html {
 }
 body {
     font-size: 16rem;
-    font-family: $-font-primary;
-    background-color: $-primary-color;
-    color: $-white;
+    font-family: var(--font-primary);
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding-top: 80px;
+}
+body.active {
+    --primary-color: #ff664f;
+    --white: #12141d;
+    --black-2: #fff;
+    --black: #fff;
+    --orange: #696b76;
+    --gray-3: #12141d;
 }
 // Dùng chung
 .content {
@@ -30,10 +39,10 @@ body {
     border-radius: 4px;
 }
 .btn-light {
-    color: $-primary-color;
-    background-color: $-white;
+    color: var(--black);
+    background-color: var(--white);
 }
 .btn-dark {
-    color: $-white;
-    background-color: $-black-2;
+    color: var(--white);
+    background-color: var(--black-2);
 }
